@@ -13,7 +13,7 @@ for i in tqdm(n):
     manual.Solution[i]
     run_time = np.append(run_time, time.time()-start)
 
-comp = pd.read_csv('complexity.csv', index_col = 0)
+comp = pd.read_csv('5k_complexity.csv', index_col = 0)
 complexity = pd.DataFrame({'ReadingFromList': run_time}, index = n)
 result = comp.join(complexity)
-result.to_csv('complexity.csv')
+result.to_csv('5k_complexity.csv')

@@ -29,4 +29,4 @@ for i in tqdm(n):
     run_time = np.append(run_time, time.time()-start)
 
 complexity = pd.DataFrame({'BruteForce' : run_time}, index = n)
-complexity.to_csv('complexity.csv', sep = ',')
+complexity.to_csv('5k_complexity.csv', sep = ',')

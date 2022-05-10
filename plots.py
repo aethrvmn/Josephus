@@ -2,19 +2,21 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('complexity.csv', index_col = 0)
+import brute, coprimes, stack, general, binary, read
+
+df = pd.read_csv('5k_complexity.csv', index_col = 0)
 
 df.plot(
         kind = 'line',
         title = 'Time Comparison Between Algorithms',
         xlabel = 'Number $n$ of Iterations',
         ylabel = 'Time',
-        # logy = True
+        logy = True
         )
 
-plt.savefig('time.png')
+plt.savefig('5k_time_log.png')
 
-df[['CoprimeDecomposition', 'ReadingFromList', 'GeneralSolution', 'BinaryTrick']].plot(
+df.plot(
         kind = 'line',
         title = 'Time Comparison Between General Solution and the Binary Trick',
         xlabel = 'Number $n$ of Iterations',
@@ -22,4 +24,5 @@ df[['CoprimeDecomposition', 'ReadingFromList', 'GeneralSolution', 'BinaryTrick']
         # logy = True
         )
 
-plt.savefig('time2.png')
+plt.savefig('5k_time.png')
+plt.show()
