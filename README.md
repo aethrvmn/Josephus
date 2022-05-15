@@ -1,2 +1,2 @@
 # Josephus
- Different Algorithms for solving the Josephus Problem and complexity omparison
+ Different Algorithms for solving the Josephus Problem and time complexity comparison
